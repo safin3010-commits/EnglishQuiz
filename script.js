@@ -122,7 +122,6 @@ window.selectAnswer = function(points) {
         showResult();
     }
 };
-
 window.showResult = function() {
     let result;
     const maxPoints = 20;
@@ -150,7 +149,7 @@ window.showResult = function() {
     document.getElementById('result-title').textContent = result.title;
     document.getElementById('result-description').textContent = result.description;
     document.getElementById('result-emoji').textContent = result.emoji;
-    document.getElementById('score-value').textContent = totalPoints + "/" + maxPoints;
+    document.getElementById('score-value').textContent = totalPoints + "/" + maxPoints + " points";
     
     showScreen('result-screen');
 };
