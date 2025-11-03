@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4a8073ea-5e47-4398-a0e0-7a4183cbe544" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/EnglishProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="4a8073ea-5e47-4398-a0e0-7a4183cbe544" name="Changes" comment="Add question." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +47,28 @@
       <option name="presentableId" value="Default" />
       <updated>1762161132563</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add question">
+      <option name="closed" value="true" />
+      <created>1762161814994</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762161814994</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add question.">
+      <option name="closed" value="true" />
+      <created>1762161853349</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762161853349</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add question" />
+    <MESSAGE value="Add question." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add question." />
   </component>
 </project>
