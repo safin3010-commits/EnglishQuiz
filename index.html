@@ -10,14 +10,31 @@
     <div class="container">
         <header>
             <div class="icon">📱</div>
-            <h1>Digital Detox Quiz</h1>
-            <p class="subtitle">What kind of phone user are you?</p>
+            <h1>Digital Detox Challenge</h1>
+            <p class="subtitle">Take control of your phone habits. Improve your focus and studies!</p>
         </header>
 
         <!-- Start Screen -->
         <div id="start-screen" class="screen active">
-            <p>Answer 5 simple questions about your phone habits and discover your digital profile!</p>
-            <button onclick="startQuiz()" class="btn start-btn">Start Quiz</button>
+            <div class="problem-info">
+                <h2>Why Digital Detox?</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-text">hours daily on phone</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">87%</span>
+                        <span class="stat-text">check phone in class</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">45%</span>
+                        <span class="stat-text">lower concentration</span>
+                    </div>
+                </div>
+                <p class="problem-description">Smartphone addiction affects studies, sleep, and real communication. Take this quiz to understand your habits and get personalized solutions.</p>
+            </div>
+            <button onclick="startQuiz()" class="btn start-btn">Start Digital Detox Quiz</button>
         </div>
 
         <!-- Quiz Screen -->
@@ -29,16 +46,39 @@
             <div id="answers-container" class="answers"></div>
         </div>
 
-<!-- Result Screen -->
-<div id="result-screen" class="screen">
-    <div class="result-icon" id="result-emoji"></div>
-    <h2 id="result-title"></h2>
-    <p id="result-description"></p>
-    <div class="score">Your score: <span id="score-value"></span></div>
-    <button onclick="restartQuiz()" class="btn">Try Again</button>
-</div>
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="result-icon" id="result-emoji"></div>
+            <h2 id="result-title"></h2>
+            <p id="result-description"></p>
+            <div class="score">Your awareness score: <span id="score-value"></span></div>
+            
+            <!-- Educational Block -->
+            <div class="educational-block">
+                <h3>🎯 Your Personal Digital Detox Plan</h3>
+                <div class="tips-container" id="educational-tips"></div>
+                <div class="challenge-box">
+                    <h4>7-Day Detox Challenge</h4>
+                    <p>Try one tip each day. Small changes make big differences!</p>
+                    <div class="challenge-days">
+                        <span class="day">Mon</span>
+                        <span class="day">Tue</span>
+                        <span class="day">Wed</span>
+                        <span class="day">Thu</span>
+                        <span class="day">Fri</span>
+                        <span class="day">Sat</span>
+                        <span class="day">Sun</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button onclick="restartQuiz()" class="btn">Retest Yourself</button>
+                <button onclick="shareQuiz()" class="btn secondary">Share with Friends</button>
+            </div>
+        </div>
     </div>
 
-<script src="script.js?v=1.0"></script>
+    <script src="script.js"></script>
 </body>
 </html>
