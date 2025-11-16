@@ -50,39 +50,27 @@ h1 {
     display: block;
 }
 
-/* Problem Info Styles */
-.problem-info {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.problem-info h2 {
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-.stats {
+/* Features Styles */
+.features {
     display: flex;
     justify-content: space-around;
     margin: 25px 0;
 }
 
-.stat-item {
+.feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.stat-number {
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #e74c3c;
+.feature-icon {
+    font-size: 2em;
+    margin-bottom: 8px;
 }
 
-.stat-text {
+.feature-text {
     font-size: 0.9em;
     color: #7f8c8d;
-    margin-top: 5px;
     text-align: center;
 }
 
@@ -90,6 +78,7 @@ h1 {
     color: #5d6d7e;
     font-size: 1.1em;
     line-height: 1.5;
+    text-align: center;
 }
 
 /* Quiz Styles */
@@ -278,9 +267,9 @@ h1 {
         font-size: 1.8em;
     }
     
-    .stats {
+    .features {
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
     }
     
     .action-buttons {
