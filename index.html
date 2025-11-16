@@ -4,138 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Balance Quiz</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .container {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            text-align: center;
-        }
-        
-        .icon {
-            font-size: 4em;
-            margin-bottom: 15px;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            font-size: 2.2em;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            color: #7f8c8d;
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-        
-        h2 {
-            color: #2c3e50;
-            font-size: 1.5em;
-            margin-bottom: 25px;
-        }
-        
-        .features {
-            display: flex;
-            justify-content: space-around;
-            margin: 30px 0;
-        }
-        
-        .feature-item {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .feature-icon {
-            font-size: 2.5em;
-            margin-bottom: 8px;
-        }
-        
-        .feature-text {
-            font-size: 0.9em;
-            color: #7f8c8d;
-        }
-        
-        .problem-description {
-            color: #5d6d7e;
-            font-size: 1.1em;
-            line-height: 1.5;
-            margin-bottom: 30px;
-        }
-        
-        .btn {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 18px 40px;
-            border-radius: 10px;
-            font-size: 1.2em;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-        
-        .btn:hover {
-            background: #2980b9;
-            transform: translateY(-2px);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="icon">📱</div>
-        <h1>Digital Balance Quiz</h1>
-        <p class="subtitle">Find your perfect balance between screen time and real life</p>
-        
-        <h2>Why Digital Balance Matters?</h2>
-        
-        <div class="features">
-            <div class="feature-item">
-                <span class="feature-icon">🎯</span>
-                <span class="feature-text">Better Focus</span>
+        <header>
+            <div class="icon">📱</div>
+            <h1>Digital Balance Quiz</h1>
+            <p class="subtitle">Find your perfect balance between screen time and real life</p>
+        </header>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <div class="problem-info">
+                <h2>Why Digital Balance Matters?</h2>
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span class="feature-text">Better Focus</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">😴</span>
+                        <span class="feature-text">Quality Sleep</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span class="feature-text">More Energy</span>
+                    </div>
+                </div>
+                <p class="problem-description">In our digital world, finding balance is key to success and well-being. Discover your habits and learn to use technology mindfully.</p>
             </div>
-            <div class="feature-item">
-                <span class="feature-icon">😴</span>
-                <span class="feature-text">Quality Sleep</span>
+            <button onclick="startQuiz()" class="btn start-btn">Start Balance Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen">
+            <div class="progress">
+                Question <span id="current-question">1</span>/10
             </div>
-            <div class="feature-item">
-                <span class="feature-icon">⚡</span>
-                <span class="feature-text">More Energy</span>
+            <h2 id="question-text"></h2>
+            <div id="answers-container" class="answers"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen">
+            <div class="result-icon" id="result-emoji"></div>
+            <h2 id="result-title"></h2>
+            <p id="result-description"></p>
+            <div class="score">Your balance score: <span id="score-value"></span></div>
+            
+            <!-- Educational Block -->
+            <div class="educational-block">
+                <h3>🎯 Your Personal Balance Plan</h3>
+                <div class="tips-container" id="educational-tips"></div>
+                <div class="challenge-box">
+                    <h4>7-Day Balance Challenge</h4>
+                    <p>Try one tip each day for a week!</p>
+                    <div class="challenge-days">
+                        <span class="day">1</span>
+                        <span class="day">2</span>
+                        <span class="day">3</span>
+                        <span class="day">4</span>
+                        <span class="day">5</span>
+                        <span class="day">6</span>
+                        <span class="day">7</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button onclick="restartQuiz()" class="btn">Test Again</button>
+                <button onclick="shareQuiz()" class="btn secondary">Share with Friends</button>
             </div>
         </div>
-        
-        <p class="problem-description">
-            In our digital world, finding balance is key to success and well-being. 
-            Discover your habits and learn to use technology mindfully.
-        </p>
-        
-        <button class="btn" onclick="startQuiz()">Start Balance Quiz</button>
     </div>
 
-    <script>
-        function startQuiz() {
-            alert('Quiz would start here! This is the centered version.');
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
